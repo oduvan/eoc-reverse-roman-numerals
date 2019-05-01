@@ -1,0 +1,83 @@
+<style>
+  .numeral-table {
+    margin: auto;
+    border-collapse: collapse;
+    text-align: center;
+  }
+  .numeral-table * {
+    border: 1px solid black;
+    padding: 8px;
+    width: 50%;
+  }
+</style>
+
+<div style="text-align: center">
+  <img src="{{MEDIA}}title.png" style="max-height: 350px; max-width: 100%">
+</div>
+
+<p>
+  <i>
+    В CheckiO миссие 
+    <a href="/mission/roman-numerals/">Roman Numerals</a> Вам нужно было преобразовать десятичное
+    число в соответствующее ему римское.<br>
+    Здесь Вам необходимо сделать все то же с точностью до наоборот.
+  </i>
+</p>
+
+<p>Вам предоставляется римское число в виде строки. Ваша задача заключается в том, чтобы преобразовать это число  
+  в ее десятичное представление.
+</p>
+
+<p>
+  Натуральное римское число в контексте этой миссии 
+  будет содержать римские цифры  в соответствии с приведенной ниже таблице <strong>и</strong> следовать правилам
+  непозиционной системы счисления.<br>
+  Просмотрите 
+  <a href="https://en.wikipedia.org/wiki/Roman_numerals#Roman_numeric_system" target="_blank">
+    эту статью в Википедии
+  </a>
+  для более детальной информации о формировании римских цифр.
+
+  <table class="numeral-table">
+    <tr><th>Numeral</th><th>Value</th></tr>
+    <tr><td>I</td><td>1 (unus)</td></tr>
+    <tr><td>V</td><td>5 (quinque)</td></tr>
+    <tr><td>X</td><td>10 (decem)</td></tr>
+    <tr><td>L</td><td>50 (quinquaginta)</td></tr>
+    <tr><td>C</td><td>100 (centum)</td></tr>
+    <tr><td>D</td><td>500 (quingenti)</td></tr>
+    <tr><td>M</td><td>1,000 (mille)</td></tr>
+</table>
+</p>
+
+<p>
+  <strong>Входные данные:</strong> Римское число в виде строки.
+</p>
+
+<p>
+  <strong>Выходные данные:</strong> Десятичное представление римского числа как int.
+</p>
+
+<div class="for_info_only">
+  <p>
+    <strong>Пример:</strong>
+  </p>
+{% if interpreter.slug == "js-node" %}
+<pre class="brush: python">reverseRoman('VI') == 6
+reverseRoman('LXXVI') == 76
+reverseRoman('CDXCIX') == 499
+reverseRoman('MMMDCCCLXXXVIII') == 3888</pre>
+{% else %}
+<pre class="brush: python">reverse_roman('VI') == 6
+reverse_roman('LXXVI') == 76
+reverse_roman('CDXCIX') == 499
+reverse_roman('MMMDCCCLXXXVIII') == 3888</pre>
+{% endif %}
+</div>
+
+<p>
+  <strong>Предварительное условие:</strong><br>
+  len(roman_string) > 0<br>
+  all(char in "MDCLXVI" for char in roman_string) == True<br>
+  0 &lt; reverse_roman(roman_string) &lt; 4000<br>
+</p>
