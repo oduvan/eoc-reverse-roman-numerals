@@ -4,6 +4,9 @@ def reverse_roman(roman_string):
     return 0
 
 if __name__ == '__main__':
+    print("Example:")
+    print(reverse_roman('VI'))
+    
     #These "asserts" using only for self-checking and not necessary for auto-testing
     assert reverse_roman('VI') == 6, '6'
     assert reverse_roman('LXXVI') == 76, '76'
