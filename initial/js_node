@@ -1,15 +1,15 @@
-"use strict";
 
-function reverseRoman(roman) {
+export function reverseRoman(roman: string): number {
     return 0;
 }
 
-var assert = require('assert');
+import * as assert from 'assert';
 
-if (!global.is_checking) {
-    assert.equal(reverseRoman('VI'), 6, "First")
-    assert.equal(reverseRoman('LXXVI'), 76, "Second")
-    assert.equal(reverseRoman('CDXCIX'), 499, "Third")
-    assert.equal(reverseRoman('MMMDCCCLXXXVIII'), 3888, "Forth")
-    console.log("Coding complete, Cesar? Click 'Check' to review your tests and earn cool rewards!");
-}
+console.log('Example:')
+console.log(reverseRoman('VI'))
+
+assert.equal(reverseRoman('VI'), 6, "First")
+assert.equal(reverseRoman('LXXVI'), 76, "Second")
+assert.equal(reverseRoman('CDXCIX'), 499, "Third")
+assert.equal(reverseRoman('MMMDCCCLXXXVIII'), 3888, "Forth")
+console.log("Coding complete, Cesar? Click 'Check' to review your tests and earn cool rewards!");
